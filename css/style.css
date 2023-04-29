@@ -1,0 +1,143 @@
+
+
+table {
+    border: 1.5px solid #69c;
+    border-collapse: collapse; /* убирает в повтор границ*/
+    color: black;
+}
+th {
+    font-weight: normal;
+    color: rgb(1, 39, 116);
+    border-bottom: 1.5px dashed #6cf;
+    padding: 12px 17px;
+}
+td {
+    
+    padding: 7px 17px;
+}
+caption {
+    color: rgb(7, 20, 83);
+}
+tbody td {
+    border-right: 1.5px dashed #6cf;
+    border-bottom: 1.5px dashed #6cf;
+    padding: 10px 20px;
+}
+tr:hover  {
+    background: #ccddff;
+}
+
+
+
+p {
+    text-indent: 1.5em; /*свойство CSS, которое задает отступ первой строки текста в элементе*/
+    width: 100%;
+    text-align: justify;
+}
+p:first-letter {
+    font-size: 20px;
+    color: rgb(87, 6, 6);   
+}
+
+span.lit:before {
+    content: '* ';
+}
+
+
+
+/*ссылки меню оформление*/
+.menu {
+    border: 1px rgb(1, 39, 116) groove;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3px;
+    font-weight: bold;
+    font-size: larger;
+    background-color: rgb(223, 233, 246);
+}
+
+span.menu a {
+    color: rgb(45, 41, 67);
+    text-decoration: none;
+}
+
+/* Ссылки, которые заканчиваются на .pdf будут окрашены в красный*/
+a[href$=".pdf"] {color: red;}
+
+
+
+footer {
+    color: rgb(132, 133, 135);
+}
+
+
+/*картиночки в профессии*/ 
+#colbaHeader {
+    position: absolute; /*Позиционируется абсолютно, относительно родителя*/
+    top: 75px; /*Координата сверху*/
+    left: 550px; /*Координата слева*/
+    transform: scale(0.5, 0.5);/*уменишим колбу в 0,5 раз*/
+}
+#headerProfession {
+    filter: brightness(88%); 
+    transform: scale(1.1, 1.1);
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+main, .main {
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 20px;
+    border: 1px solid black;
+    padding: 15px; 
+    border-radius: 3px;
+    background: linear-gradient(to bottom right , rgb(244, 231, 217), rgb(241, 172, 115));
+}
+body {
+    background-color: rgb(197, 224, 247);
+}
+
+/*раскрывающийся список*/
+/* Псевдоэлемент CSS ::-moz-list-bullet - это расширение Mozilla, которое представляет маркер 
+(обычно маркерную строку) элемента списка (<li>) в неупорядоченном списке (<ul>). */
+summary::marker {
+    display: none;
+}
+/* Псевдоэлемент ::marker применяет стили к маркеру элемента списка, которые обычно 
+содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого 
+установлен display: list-item, например, у такого как <li> или <summary>. */
+summary {
+    display: inline-block;
+    padding: 2em 2em 2em 2em;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+}
+summary:before {
+    content: "+";
+    margin-right: 1em;
+}
+details[open]>summary:before {
+    content: "–";
+}
+/*Этот CSS-код задает тень для элемента при фокусе на нем.*/
+summary:focus {
+    /*inset - это значение, которое указывает, что тень должна быть внутренней (внутри границ элемента)*/
+    /*0 0 2px - это значения для горизонтального смещения, вертикального смещения и радиуса размытия тени*/
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+details {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+/*сестринские элементы*/
+/*Теперь выберем элемент ol, но только тот, который находится после элемента h4 (сестринский элемент) пусть эл-ты списка имеют такой значок коричневого цвета*/
+h4 + ol li::before {
+    content: "✔ ";
+    color: brown;
+}
