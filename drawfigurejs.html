@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>Редактор JavaScript</title>
+    <style>
+        canvas {     border: 1px dashed black; }
+    </style>
+    <script>
+        function clear_holst()
+        { var canvas = document.getElementById("drawingCanvas");
+        var context = canvas.getContext("2d");
+        context.clearRect(0,0,1000,1000);  }
+    </script>  
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body> 
+    <header>
+        <nav>
+        <span class="menu"><a href="index.html">На главную</a></span>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <table border =0> 
+            <tr> 
+                <td> Введите  текст программы на javascript:</td>
+                <td>Отображение рисунка: </td>
+            </tr>
+            <tr>
+                <td><textarea id="mycode" rows=20 cols=33></textarea></td> 
+                <td> <canvas id="drawingCanvas" width="300" height="300">Ваш браузер не поддерживает canvas </canvas></td>
+            </tr>
+        </table>
+        <br> <br>
+        <button onclick= "eval(document.getElementById('mycode').value)"> Отобразить рисунок  </button>
+    </main>
+    <footer style="color: rgb(132, 133, 135);">
+        <hr>
+        <address>Directed by SUAI student.<time datetime="2023-03-01"> 2023-03-01 Was made this page</time></address>
+    </footer>
+</body>
+</html>

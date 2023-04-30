@@ -11,17 +11,13 @@ th {
     border-bottom: 1.5px dashed #6cf;
     padding: 12px 17px;
 }
-td {
-    
-    padding: 7px 17px;
-}
 caption {
     color: rgb(7, 20, 83);
 }
 tbody td {
     border-right: 1.5px dashed #6cf;
     border-bottom: 1.5px dashed #6cf;
-    padding: 10px 20px;
+   
 }
 tr:hover  {
     background: #ccddff;
@@ -141,3 +137,24 @@ h4 + ol li::before {
     content: "✔ ";
     color: brown;
 }
+
+
+
+textarea.redactorjs{
+    display: block;
+    margin: 0 auto;
+}
+p.redactorjs{ 
+    margin: 0 auto;
+    text-align:center;
+}
+button.redactorjs{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+
+
+  
+  
